@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Exposes the Azure SDK for Java to other Jenkins plugins.
+</div>
