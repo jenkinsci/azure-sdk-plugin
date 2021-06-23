@@ -5,10 +5,12 @@ import com.azure.core.http.ProxyOptions;
 import com.azure.core.http.netty.NettyAsyncHttpClientBuilder;
 import hudson.ProxyConfiguration;
 import hudson.Util;
+import java.time.Duration;
 import jenkins.model.Jenkins;
 import jenkins.util.JenkinsJVM;
 
 import java.net.InetSocketAddress;
+import jenkins.util.SystemProperties;
 
 public class HttpClientRetriever {
 
@@ -25,7 +27,7 @@ public class HttpClientRetriever {
                 return get(proxy);
             }
         }
-        return new NettyAsyncHttpClientBuilder().build();
+        return getBuilder().build();
     }
     
     public static HttpClient get(ProxyConfiguration proxy) {
@@ -42,6 +44,26 @@ public class HttpClientRetriever {
             }
         }
 
-        return new NettyAsyncHttpClientBuilder().proxy(proxyOptions).build();
+        return getBuilder().proxy(proxyOptions).build();
+    }
+
+    private static NettyAsyncHttpClientBuilder getBuilder() {
+        NettyAsyncHttpClientBuilder builder = new NettyAsyncHttpClientBuilder();
+
+        // Apply settings from system properties
+        Long readTimeoutSeconds = SystemProperties.getLong(HttpClientRetriever.class.getName() + ".readTimeoutSeconds");
+        if (readTimeoutSeconds != null) {
+            builder.readTimeout(Duration.ofSeconds(readTimeoutSeconds));
+        }
+        Long responseTimeoutSeconds = SystemProperties.getLong(HttpClientRetriever.class.getName() + ".responseTimeoutSeconds");
+        if (responseTimeoutSeconds != null) {
+            builder.responseTimeout(Duration.ofSeconds(responseTimeoutSeconds));
+        }
+        Long writeTimeoutSeconds = SystemProperties.getLong(HttpClientRetriever.class.getName() + ".writeTimeoutSeconds");
+        if (writeTimeoutSeconds != null) {
+            builder.writeTimeout(Duration.ofSeconds(writeTimeoutSeconds));
+        }
+
+        return builder;
     }
 }
