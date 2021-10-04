@@ -89,7 +89,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-core</artifactId>
-            <version>1.20.0</version>
+            <version>1.21.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
