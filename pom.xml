@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.1</version>
             <exclusions>
                 <!--
                     Rely on the Jackson 2 API plugin for Jackson and StAX, excluding all other StAX
