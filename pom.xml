@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
-            <version>1.4.4</version>
+            <version>1.4.5</version>
             <exclusions>
                 <!--
                     Rely on the Jackson 2 API plugin for Jackson and StAX, excluding all other StAX
@@ -89,7 +89,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-core</artifactId>
-            <version>1.25.0</version>
+            <version>1.26.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -124,7 +124,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-core-http-netty</artifactId>
-            <version>1.11.7</version>
+            <version>1.11.8</version>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
