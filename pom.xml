@@ -14,7 +14,6 @@
     <properties>
         <changelist>9999-SNAPSHOT</changelist>
         <jenkins.version>2.277.2</jenkins.version>
-        <java.level>8</java.level>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
     </properties>
     <name>Azure SDK API Plugin</name>
@@ -36,7 +35,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
-            <version>1.5.0</version>
+            <version>1.5.5</version>
             <exclusions>
                 <!--
                     Rely on the Jackson 2 API plugin for Jackson and StAX, excluding all other StAX
