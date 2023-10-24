@@ -10,6 +10,9 @@ import jenkins.model.Jenkins;
 import jenkins.util.JenkinsJVM;
 
 import java.net.InetSocketAddress;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 import jenkins.util.SystemProperties;
 
 public class HttpClientRetriever {
@@ -40,7 +43,11 @@ public class HttpClientRetriever {
             }
             String noProxyHost = Util.fixEmpty(proxy.getNoProxyHost());
             if (noProxyHost != null) {
-                proxyOptions.setNonProxyHosts(noProxyHost);
+                // com.azure.core.http.ProxyOptions accepts a '|' delimited String
+                // https://learn.microsoft.com/en-us/java/api/com.azure.core.http.proxyoptions?view=azure-java-stable#com-azure-core-http-proxyoptions-setnonproxyhosts(java-lang-string)
+                proxyOptions.setNonProxyHosts(Arrays.stream(noProxyHost.split("[ \t\n,|]+"))
+                    .filter(s -> !s.isEmpty())
+                    .collect(Collectors.joining("|")));
             }
         }
 
