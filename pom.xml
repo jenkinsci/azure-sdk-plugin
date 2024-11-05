@@ -15,7 +15,6 @@
         <changelist>9999-SNAPSHOT</changelist>
         <jenkins.version>2.452.4</jenkins.version>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-    <maven.compiler.release>17</maven.compiler.release>
     </properties>
     <name>Azure SDK API Plugin</name>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
