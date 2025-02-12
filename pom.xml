@@ -40,11 +40,6 @@
                 <artifactId>azure-storage-common</artifactId>
                 <version>12.28.0</version>
             </dependency>
-            <dependency>
-                <groupId>net.minidev</groupId>
-                <artifactId>json-smart</artifactId>
-                <version>2.5.1</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -109,8 +104,8 @@
 
         <!-- conflicting versions coming from azure-identity dependency -->
         <dependency>
-            <groupId>net.minidev</groupId>
-            <artifactId>json-smart</artifactId>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>json-path-api</artifactId>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
