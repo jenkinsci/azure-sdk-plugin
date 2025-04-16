@@ -58,6 +58,10 @@
                     <artifactId>jackson-dataformat-xml</artifactId>
                 </exclusion>
                 <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
                     <groupId>com.fasterxml</groupId>
                     <artifactId>aalto-xml</artifactId>
                 </exclusion>
