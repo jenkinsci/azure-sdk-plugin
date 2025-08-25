@@ -38,7 +38,7 @@
             <dependency>
                 <groupId>com.azure</groupId>
                 <artifactId>azure-storage-common</artifactId>
-                <version>12.30.1</version>
+                <version>12.30.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -219,7 +219,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-storage-blob</artifactId>
-            <version>12.31.1</version>
+            <version>12.31.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.azure</groupId>
@@ -234,7 +234,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-storage-file-share</artifactId>
-            <version>12.27.1</version>
+            <version>12.27.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.azure</groupId>
@@ -254,7 +254,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-security-keyvault-secrets</artifactId>
-            <version>4.10.1</version>
+            <version>4.10.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
