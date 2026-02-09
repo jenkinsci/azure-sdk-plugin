@@ -38,7 +38,7 @@
             <dependency>
                 <groupId>com.azure</groupId>
                 <artifactId>azure-storage-common</artifactId>
-                <version>12.32.1</version>
+                <version>12.32.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -219,7 +219,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-storage-blob</artifactId>
-            <version>12.33.1</version>
+            <version>12.33.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.azure</groupId>
@@ -234,7 +234,7 @@
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-storage-file-share</artifactId>
-            <version>12.29.1</version>
+            <version>12.29.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.azure</groupId>
