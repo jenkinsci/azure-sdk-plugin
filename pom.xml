@@ -40,6 +40,11 @@
                 <artifactId>azure-storage-common</artifactId>
                 <version>12.34.0</version>
             </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>3.7.19</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
